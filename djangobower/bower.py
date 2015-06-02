@@ -34,7 +34,7 @@ class BowerAdapter(object):
 
     def install(self, packages, *options):
         """Install packages from bower"""
-        self.call_bower(['install'] + list(options) + list(packages))
+        self.call_bower(['install', '--config.interactive=false'] + list(options) + list(packages))
 
     def _accumulate_dependencies(self, data):
         """Accumulate dependencies"""
