@@ -10,7 +10,7 @@ class BowerFileSystemStorage(FileSystemStorage):
                                                      directory_permissions_mode)
 
     def listdir(self, path):
-        _path = filter(None, path.split(os.path.sep))
+        _path = list(filter(None, path.split(os.path.sep)))
         try:
             r = super(BowerFileSystemStorage, self).listdir(path)
             if len(_path) == 1 and 'dist' in r[0]:
