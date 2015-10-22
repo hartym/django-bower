@@ -6,7 +6,6 @@ import os
 
 class BowerFileSystemStorage(FileSystemStorage):
     def __init__(self, location=None, base_url=None, file_permissions_mode=None, directory_permissions_mode=None):
-        print location, base_url, file_permissions_mode, directory_permissions_mode
         super(BowerFileSystemStorage, self).__init__(location, base_url, file_permissions_mode,
                                                      directory_permissions_mode)
 
